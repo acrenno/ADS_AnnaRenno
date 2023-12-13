@@ -1,0 +1,82 @@
+Trechos de código para serem copiados e colocados:
+
+
+*************************
+book-table.component.html
+*************************
+
+<h1>Tabela de Livros</h1>
+<table>
+<thead>
+<tr>
+<td>ID</td>
+<td>Title</td>
+<td>Category</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Monge e o Executivo</td>
+<td>Auto-ajuda</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Crónicas do Gelo e Fogo</td>
+<td>Contos</td>
+</tr>
+</tbody>
+</table>
+
+
+**********************
+exemplo-de-livros.json
+**********************
+
+[
+{"id":6, "title":"Lobo Blanco", "category":"Ficção"}
+,
+{"id":7, "title":"Liderança Consciente", "category":"Executivo"}
+,
+{"id":8, "title":"A Pluma e a Espada", "category":"Poesia"}
+,
+{"id":9, "title":"A Montanha Branca", "category":"Relatos"}
+]
+
+
+***************
+proxy.config.js
+***************
+
+const PROXY_CONFIG = [
+  {
+    context: ['/api'],
+    target: 'http://localhost:8080/',
+    secure: false,
+    logLevel: 'debug',
+    pathRewrite: { '^/api': '' }
+  }
+];
+module.exports = PROXY_CONFIG;
+
+
+************
+angular.json
+************
+
+          "options": {
+            "browserTarget": "move-safe:build",
+            "proxyConfig": "proxy.config.js"
+          },
+
+
+************************************
+comando para instalar o SweetAlert2
+************************************
+
+npm install sweetalert2 @sweetalert2/ngx-sweetalert2
+
+
+
+
+
