@@ -1,0 +1,39 @@
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+</head>
+
+
+
+<body>
+
+<h1>Tabela de produtos</h1>
+
+<table border="1">
+
+  <tr>
+
+    <td>Descriçao</td>
+
+    <td>Preço</td>
+
+  </tr>
+
+  <tr th:each="pvar:${listaProdutos}">
+
+    <td th:text="${pvar.descricao}"></td>
+
+    <td th:text="${pvar.preco}"></td>
+
+  </tr>
+
+
+
+</table>
+
+</body>
+
+</html>
